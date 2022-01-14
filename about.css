@@ -6,8 +6,12 @@ html{
 
 body{
     background-color:#ffffff;
-    color: rgb(255, 255, 255);
-    margin-top: 120px;
+    background-image:url(images/top-pink.png),url(images/bottom-blue.png);
+    background-position: center 35px, center bottom;
+    background-repeat: no-repeat;
+    color: rgb(48, 45, 45);
+    margin-top: 110px;
+    width: 100%;
 }
 
 ul{
@@ -18,8 +22,45 @@ p{
     font-family: 'Zen Maru Gothic', sans-serif;
 }
 
+h2{
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
 a{
     text-decoration: none;
+}
+
+.home-content{
+    text-align: center;
+    margin-top: 7%;
+}
+
+.home-content {
+    text-align: center;
+    font-size: 1.500rem;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+.home{
+    margin-left: 150px;
+}
+
+.home-h2{
+    text-align: left;
+    font-size: 1.125rem;
+    margin-top: 100px;
+}
+
+.home-p {
+    text-align: left;
+    font-size: 1.125rem;
+    margin-top: 10px;
+    margin-bottom: 160px;
+}
+
+.home-p p {
+    margin: 15px;
 }
 
 .page-header{
