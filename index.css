@@ -9,8 +9,7 @@ body{
     background-image: url(images/TOP-background.png);
     background-position: top center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    width: 100%;
+    background-size: cover 100%;
 }
 
 ul{
@@ -50,20 +49,18 @@ img{
     color: rgb(199, 199, 199);
 }
 
+.hamburger-menu{
+    display: none;
+}
+
 .page-header{
     display: flex;
     justify-content: space-between;
 }
 
 .wrapper{
-    max-width: 1500px;
     margin: 0 auto;
     padding: 0 4%;
-}
-
-.big-bg{
-    background-size: cover;
-    background-position: center top;
 }
 
 .home-content{
@@ -81,12 +78,16 @@ img{
     margin: 0 0 35px;
 }
 
+.phone-content{
+    display: none;
+}
+
 /*ボタン*/
 .button {
     display: block;
     font-family:"Zen Maru Gothic";
     font-size: 1.200rem;
-    background: rgb(81, 162, 255);
+    background: rgb(154, 86, 243);
     color: #f7f7f7;
     border-radius: 100px;
     padding: 18px 32px;
@@ -96,7 +97,7 @@ img{
     margin-right: auto;
 }
 .button:hover {
-    background: #4d6eff;
+    background: #934dbb;
 }
 
 /* 見出し */
@@ -121,4 +122,176 @@ footer {
 footer p {
     color: #fff;
     font-size: 0.875rem;
+}
+
+/* -----------------------タブレット用-----------------------------*/
+
+@media screen and (max-width: 959px){
+
+    .menu-btn {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        height: 60px;
+        width: 60px;
+        justify-content: center;
+        align-items: center;
+        z-index: 90;
+    }
+    .menu-btn span,
+    .menu-btn span:before,
+    .menu-btn span:after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 25px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        position: absolute;
+    }
+    .menu-btn span:before {
+        bottom: 8px;
+    }
+    .menu-btn span:after {
+        top: 8px;
+    }
+
+    #menu-btn-check:checked ~ .menu-btn span {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+    #menu-btn-check:checked ~ .menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    .hamburger-menu{
+        display: contents;
+    }
+/*menuuuuuuuuuuuuuuuuu*/
+    .menu-content {
+        font-family: 'Zen Maru Gothic', sans-serif;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        z-index: 80;
+        background-color: #ce3894;
+        transition: all 0.5s;
+    }
+    #menu-btn-check:checked ~ .menu-content {
+        left: 0;
+    }
+    .menu-content ul {
+        padding: 70px 10px 0;
+    }
+    .menu-content ul li {
+        border-bottom: solid 1px #ffffff;
+        list-style: none;
+    }
+    .menu-content ul li a {
+        display: block;
+        width: 100%;
+        font-size: 15px;
+        box-sizing: border-box;
+        color:#ffffff;
+        text-decoration: none;
+        padding: 9px 15px 10px 0;
+        position: relative;
+    }
+    .menu-content ul li a::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-top: solid 2px #ffffff;
+        border-right: solid 2px #ffffff;
+        transform: rotate(45deg);
+        position: absolute;
+        right: 11px;
+        top: 16px;
+    }
+
+#menu-btn-check {
+    display: none;
+}
+
+.main-nav{
+    display: none;
+}
+
+.phone-content{
+    display: none;
+}
+
+.page-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.wrapper{
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.home-content{
+    text-align: center;
+    margin-top: 7%;
+}
+
+.home-content p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+    color: #f7f7f7;
+}
+
+.home-content h2 {
+    margin: 0 0 35px;
+}
+
+/* 見出し */
+.page-title{
+    font-size: 2.5rem;
+    font-family: "Zen Maru Gothic";
+    font-weight: normal;
+    color: #f7f7f7;
+}
+
+}
+
+/*ーーーーーーーーーーーーーースマホ用ーーーーーーーーーーーーーーー*/
+
+@media screen and (max-width: 480px) {
+.phone-content{
+    display: contents;
+}
+.home-content{
+    display: none;
+}
+
+.phone-content{
+    text-align: center;
+    margin-top: 7%;
+}
+
+.phone-content p {
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+    margin-top: 35px;
+    color: #f7f7f7;
+}
+
+.page-title{
+    font-size: 2.3rem;
+}
+.phone-h2{
+    margin-top: 35px;
+}
+.phone-content h2{
+    margin-top: 15px;
+}
+
 }
