@@ -33,6 +33,7 @@ a{
 
 .top{
     text-align: center;
+    margin: 0 auto;
     width: 100%;
 }
 
@@ -44,7 +45,28 @@ a{
 
 .top h2{
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.hobby h2{
+    margin-top: 60px;
+}
+
+.hobby p{
+    text-align: center;
+}
+
+
+.hobby-list{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    margin-top: 20px;
+}
+
+.hobby-list li{
+    list-style: circle inside;
+    text-align: left;
+    margin: 0 auto;
+    width: 200px;
 }
 
 .page-header{
@@ -115,7 +137,7 @@ footer {
 }
 
 footer p {
-    color: #fff;
+    color: rgb(122, 115, 115);
     font-size: 0.875rem;
 }
 
@@ -220,4 +242,14 @@ footer p {
 .main-nav{
     display: none;
 }
+
+}
+
+/*ーーーーーーーーーーーーーースマホ用ーーーーーーーーーーーーーーー*/
+
+@media screen and (max-width: 480px) {
+    .top p{
+        margin: auto;
+        width: 300px;
+    }
 }
